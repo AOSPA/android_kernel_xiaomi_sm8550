@@ -2215,3 +2215,35 @@ source "arch/arm64/gunyah/Kconfig"
 if CRYPTO
 source "arch/arm64/crypto/Kconfig"
 endif
+
+config TARGET_PRODUCT_BABYLON
+	bool "Target product is babylon"
+	default n
+
+config TARGET_PRODUCT_FUXI
+	bool "Target product is fuxi"
+	default n
+
+config TARGET_PRODUCT_ISHTAR
+	bool "Target product is ishtar"
+	default n
+
+config TARGET_PRODUCT_NUWA
+	bool "Target product is nuwa"
+	default n
+
+config TARGET_PRODUCT_SHENG
+	bool "Target product is sheng"
+	default n
+
+config TARGET_PRODUCT_SOCRATES
+	bool "Target product is socrates"
+	default n
+
+config TARGET_PRODUCT_VERMEER
+	bool "Target product is socrates"
+	default n
+
+config TARGET_PRODUCT_WANGSHU
+	bool "Target product is wangshu"
+	default n
