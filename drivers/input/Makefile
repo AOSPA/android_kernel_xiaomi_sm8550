@@ -32,6 +32,8 @@ obj-$(CONFIG_RMI4_CORE)		+= rmi4/
 
 obj-$(CONFIG_INPUT_FINGERPRINT) += fingerprint/
 
+obj-$(CONFIG_STMVL53L5)		+= stmvl53l5/
+
 ifneq (, $(filter $(word 2,$(subst _, ,$(TARGET_PRODUCT))), nuwa))
         KBUILD_CPPFLAGS += -DCONFIG_TARGET_PRODUCT_NUWA
         KBUILD_CPPFLAGS += -DQCOM_HAPTIC_F0_PROTECT
