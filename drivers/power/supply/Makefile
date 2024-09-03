@@ -108,3 +108,25 @@ obj-$(CONFIG_CHARGER_SURFACE)	+= surface_charger.o
 obj-$(CONFIG_QTI_BATTERY_CHARGER)	+= qti_battery_charger.o
 obj-$(CONFIG_QCOM_POWER_SUPPLY)	+= qcom/
 obj-$(CONFIG_XM_POGO_DRIVER)	+= pogoChg/
+
+ifneq (, $(filter $(word 2,$(subst _, ,$(TARGET_PRODUCT))), nuwa))
+        KBUILD_CPPFLAGS += -DCONFIG_TARGET_PRODUCT_NUWA
+endif
+
+ifneq (, $(filter $(word 2,$(subst _, ,$(TARGET_PRODUCT))), fuxi))
+        KBUILD_CPPFLAGS += -DCONFIG_TARGET_PRODUCT_FUXI
+endif
+
+ifneq (, $(filter $(word 2,$(subst _, ,$(TARGET_PRODUCT))), vermeer))
+        KBUILD_CPPFLAGS += -DCONFIG_TARGET_PRODUCT_VERMEER
+endif
+
+ifneq (, $(filter $(word 2,$(subst _, ,$(TARGET_PRODUCT))), socrates))
+        KBUILD_CPPFLAGS += -DCONFIG_TARGET_PRODUCT_SOCRATES
+        KBUILD_CPPFLAGS += -DQCOM_HAPTIC_F0_PROTECT
+endif
+
+ifneq (, $(filter $(word 2,$(subst _, ,$(TARGET_PRODUCT))), ishtar))
+        KBUILD_CPPFLAGS += -DCONFIG_TARGET_PRODUCT_ISHTAR
+        KBUILD_CPPFLAGS += -DQCOM_HAPTIC_F0_PROTECT
+endif
